@@ -68,6 +68,23 @@ class RestaurantTest {
 
     //>>>>>>>>>>>>>>>>>>>>>>>>TOTAL COST OF ORDER<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-    //<<<<<<<<<<<<<<<<<<<<<<<<<<<TOTAL COST OF ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void return_the_amount_of_the_selected_menu_items_from_the_list() throws itemNotFoundException {
+
+        int itemAdded;
+        itemAdded = restaurant.orderCost("Sweet corn soup");
+        itemAdded = restaurant.orderCost("Vegetable lasagne");
+        itemAdded = restaurant.orderCost("Sweet corn soup");
+        int your_Order_Will_Cost = itemAdded;
+        assertEquals(119+269+119, your_Order_Will_Cost);
+
+    }
+
+
+
+    //>>>>>>>>>>>>>>>>>>>>>>>>TOTAL COST OF ORDER<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
 
 }

@@ -76,4 +76,13 @@ public class Restaurant {
 
 
 
+    int totalAmount = 0;
+    public int orderCost(String itemName)throws itemNotFoundException{
+        Item menuItem = findItemByName(itemName);
+        totalAmount += menuItem.getPrice();
+        return totalAmount;
+    }
+
+
+
 }
